@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta charset="utf-8"/>
+    <title>Crypto Bowl</title>
+    <style>
+        body { background: #000; margin: 0; padding: 0; }
+        canvas { image-rendering: optimizeSpeed; -ms-touch-action: none; margin: 0; padding: 0; }
+    </style>
+</head>
+<body>
+    <div id="gm4html5_div_id">
+        <img src="html5game/splash.png" id="GM4HTML5_loadingscreen" style="display:none;"/>
+        <canvas id="canvas" width="853" height="480">
+            <p>Your browser doesn't support HTML5 canvas.</p>
+        </canvas>
+    </div>
+
+    <script>
+    // Poki SDK stubs - so game runs without Poki
+    window.poki_init_raw = function() { return false; };
+    window.poki_loadbar = function() {};
+    window.poki_gameplay_start = function() {};
+    window.poki_gameplay_stop = function() {};
+    window.poki_commercial_break = function(cb) { if(cb) cb(); };
+    window.poki_rewarded_break = function(cb) { if(cb) cb(true); };
+    window.cpd = function() { return false; };
+    window.PokiSDK = null;
+    </script>
+
+    <script type="text/javascript" src="html5game/RetroBowl.js"></script>
+
+    <script>
+    window.addEventListener("load", function() {
+        window.PokiSDK_loadState = 0;
+        window.PokiSDK_OK = false;
+        GameMaker_Init();
+    });
+
+    // Re-enable right-click after 3 seconds
+    setTimeout(function() {
+        document.body.oncontextmenu = null;
+    }, 3000);
+    </script>
+</body>
+</html>
