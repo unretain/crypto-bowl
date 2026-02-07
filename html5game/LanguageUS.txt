@@ -219,8 +219,8 @@ ui_Yes	Yes
 ui_No	No
 Punt	Punt
 Field Goal	Field Goal
-msg_NewGame	Do you want to start a new career?##WARNING!#Your save data and any existing#Coaching Credits will be lost.
-msg_NewGameCredits	Do you want to start a new career?##You have $num of your purchased Coaching Credits remaining that will be transferred to your new save file.
+msg_NewGame	Do you want to start a new career?##WARNING!#Your save data and any existing#Solana will be lost.
+msg_NewGameCredits	Do you want to start a new career?##You have $num of your purchased Solana remaining that will be transferred to your new save file.
 matchmsg_PlayPunt	Play 4th down or punt?
 matchmsg_PlayFG	Play $down or go for field goal?
 ui_NewTrait	New Trait!
@@ -359,14 +359,14 @@ ui_PicksLeft	Picks Left
 ui_Picks	Picks
 ui_SignPlayer	Sign Player
 msg_SignPlayer	Do you want to sign $position $playername?
-msg_SignPlayerStore	Do you want to sign $position $playername? It will cost $num coaching credits.
-msg_SignPlayerStoreNoCredit	You need $num coaching credits to sign this player.
+msg_SignPlayerStore	Do you want to sign $position $playername? It will cost $num Solana.
+msg_SignPlayerStoreNoCredit	You need $num Solana to sign this player.
 msg_SignRookie	Do you want to sign rookie $position $playername?
 msg_CannotSign1	You already have a $position.##You will need to cut or trade the $position from your roster if you want to sign $playername.
 msg_CannotSign2	You already have $num players for the $position position.##You will need to cut or trade someone from your roster if you want to sign $playername.
 ui_Sign	Sign
-msg_SkipDraft	You still have $num picks left.##Do you want to sell your picks in this round for $value coach credits?
-msg_SkipDraft1	You still have a pick left in this round.##Do you want to sell it for $value coach credits?
+msg_SkipDraft	You still have $num picks left.##Do you want to sell your picks in this round for $value Solana?
+msg_SkipDraft1	You still have a pick left in this round.##Do you want to sell it for $value Solana?
 ui_NoMorePicks	You don't have any picks left.
 ui_NoMorePicksToTrade	You don't have a $num round pick for next season's draft to trade.
 ui_Rookie	Rookie
@@ -444,7 +444,7 @@ ui_Scanlines	Scanlines
 ui_On	On
 ui_Off	Off
 ui_TeamMorale	Team Morale
-ui_Credit	Credit
+ui_Credit	Solana
 ui_Facilities	Facilities
 ui_Fans	Fans
 ui_Fan	Fan
@@ -458,10 +458,10 @@ info_Facility_Stadium	Improve your stadium facilities to make fans more positive
 info_Facility_Training	Higher quality training facilities help players gain XP faster.
 info_Facility_Rehab	Better rehab helps players maintain good condition and recover from injury quicker.
 info_Staff	Your coordinators determine the base rating for defense and offense (the rating before star players are taken into account).
-msg_facility_Stadium	Do you want to improve the stadium and fan facilities for $num credits?
-msg_facility_Training	Do you want to improve the player training facilities for $num credits?
-msg_facility_Rehab	Do you want to improve the player rehab facilities for $num credits?
-msg_NoCreditFacility	You do not have enough credits to upgrade this facility.
+msg_facility_Stadium	Do you want to improve the stadium and fan facilities for $num Solana?
+msg_facility_Training	Do you want to improve the player training facilities for $num Solana?
+msg_facility_Rehab	Do you want to improve the player rehab facilities for $num Solana?
+msg_NoCreditFacility	You do not have enough Solana to upgrade this facility.
 msg_FacilityTooSoon	You cannot upgrade this facility twice in one week.
 ui_UpgradeCost	Upgrade#Cost
 ui_FrontOffice	Front Office
@@ -471,13 +471,13 @@ ui_AvailableHires	Available Hires
 ui_Hired	Hired
 ui_CurrentHire	Current Hire
 ui_HireStaff	Hire Staff
-msg_HireStaff	Do you want to hire $hirename on a $year year contract for $num credits?##Your existing coach will be fired.
-msg_HireStaffNoCost	You need $num coach credits to hire this member of staff.
-msg_StaffExtend	Do you want to extend $hirename's contract by 1 year for $num credits?
+msg_HireStaff	Do you want to hire $hirename on a $year year contract for $num Solana?##Your existing coach will be fired.
+msg_HireStaffNoCost	You need $num Solana to hire this member of staff.
+msg_StaffExtend	Do you want to extend $hirename's contract by 1 year for $num Solana?
 msg_StaffExtend1	Do you want to extend $hirename's contract by 1 year for $num credit?
-msg_StaffExtendNoCost	You need $num coach credits to extend this member of staff's contract by 1 year.
+msg_StaffExtendNoCost	You need $num Solana to extend this member of staff's contract by 1 year.
 msg_StaffExtendNoAge	This member of staff is retiring this year.
-msg_StaffExtendNoCost1	You need $num coach credit to extend this member of staff's contract by 1 year.
+msg_StaffExtendNoCost1	You need $num Solana to extend this member of staff's contract by 1 year.
 msg_StaffExpiring	Your $position's contract expires at the end of this season.
 msg_StaffExpiringTip	Your $position's contract expires at the end of this season. You can extend their contract from their profile page.
 news_HireStaff	$teamname have signed $position $hirename on a $num year contract.
@@ -533,7 +533,7 @@ choice_CriticiseCoaches	Criticize#Coaching
 choice_CriticiseFans	Criticize#Fans
 choice_CriticiseOfficials	Criticize#Officials
 ui_MoraleDown	Morale Down!
-ui_CreditDown	Coach Credit -$num
+ui_CreditDown	Solana -$num
 ui_Cost	Cost
 ui_Effect	Effect
 dilemma_ByeWeek1	It's your bye week. Do you want to spend some extra time focusing on the team or talking with the media?-choice_FocusTeam-choice_FocusMedia
@@ -798,18 +798,18 @@ iap_RestoreFail	Purchase restore failed
 iap_PurchaseSuccess	Purchase successful!
 msg_PurchaseUnlock	To continue playing you must purchase the full version for $price.##Do you wish to unlock the full version now?
 msg_StoreConnect_Unlock	To continue playing you must unlock the full version.##Please make sure you are connected to the internet to make a purchase.
-msg_PurchaseCredits	Would you like to purchase $num coaching credits for $price?
+msg_PurchaseCredits	Would you like to purchase $num Solana for $price?
 msg_StoreConnect	The store is unavailable. Please make sure you have an internet connection.
-msg_StoreReview	Would you like to rate and review Crypto Bowl on the store for $num coach credits?
+msg_StoreReview	Would you like to rate and review Crypto Bowl on the store for $num Solana?
 ui_Store	Store
 btn_FreeAgents	Free#Agents
-btn_BuyCredits	Buy#Credits
+btn_BuyCredits	Buy#Solana
 btn_StaffHires	Staff#Hires
 ui_Unlocked	Unlocked
 ui_Unlock	Unlock
 ui_Purchased	Purchased
-ui_BuyCredits	Buy Credits
-info_freeagents	Players in free agency are available to sign for any team. However, persuading them to join your team will require coaching credits and salary cap space. The quality of the available players depletes over the course of a season.
+ui_BuyCredits	Buy Solana
+info_freeagents	Players in free agency are available to sign for any team. However, persuading them to join your team will require Solana and salary cap space. The quality of the available players depletes over the course of a season.
 ui_Done	Done
 ui_Close	Close
 btn_RestorePurchases	Restore#Purchases
@@ -835,7 +835,7 @@ tip_13	A player's game performance can affect his morale
 tip_14	Poor catching skills lead to bobbles and dropped balls
 tip_15	Improve your rehab facility to reduce the number of injuries suffered
 tip_16	If your QB is getting rushed you need stronger offensive linemen
-tip_17	Coaching Credit isn't cash, it's kudos - it represents how much respect you have from the owner, team and fans
+tip_17	Solana isn't cash, it's kudos - it represents how much respect you have from the owner, team and fans
 tip_18	Upgrading your training facility will give players an immediate morale boost
 tip_19	Kick range depletes during a game depending on stamina
 tip_20	Fast players are more likely to hurdle tackles
@@ -873,9 +873,9 @@ ui_min2	2 Mins
 ui_min3	3 Mins
 ui_QtrLength	Quarters
 ui_RefreshHires	Refresh#Hires
-msg_FreeAgentReset	Do you wish to refresh the free agent list for $num coaching credits?
-msg_StaffReset	Do you wish to refresh the hire list for $num coaching credits?
-msg_ResetNoCredit	You need $num credits to refresh the list.
+msg_FreeAgentReset	Do you wish to refresh the free agent list for $num Solana?
+msg_StaffReset	Do you wish to refresh the hire list for $num Solana?
+msg_ResetNoCredit	You need $num Solana to refresh the list.
 msg_ResetTooSoon	You cannot refresh the list again until next week.
 match_Audible	Audible
 match_Audibles	Audibles
@@ -896,7 +896,7 @@ ui_SaveSlot5	Save 5
 ui_Delete	Delete
 ui_ExitGame	Exit Game
 ui_Exit	Exit
-msg_DeleteGame	Are you sure you want to delete this save file?##Slot $num#$savedetails##WARNING!#Existing coaching credits will be lost!
+msg_DeleteGame	Are you sure you want to delete this save file?##Slot $num#$savedetails##WARNING!#Existing Solana will be lost!
 ui_Remaining	Remaining
 tla_remaining	rem
 ui_TeamEditor	Team Editor
@@ -933,7 +933,7 @@ ui_CopySlot3	Copy Teams#From Save 3
 ui_CopySlot4	Copy Teams#From Save 4
 ui_CopySlot5	Copy Teams#From Save 5
 msg_CopyUniforms	Copy the team names and uniform colors from slot $num?
-msg_UnlimitedFeatures	Upgrade to the unlimited version now!##* Get 25 coaching credits *#* Edit team names and uniforms *#* Edit player names *#* Snow and rain weather effects *#* Support development! *
+msg_UnlimitedFeatures	Upgrade to the unlimited version now!##* Get 25 Solana *#* Edit team names and uniforms *#* Edit player names *#* Snow and rain weather effects *#* Support development! *
 ui_Upgrade	Upgrade
 ui_Difficulty	Difficulty
 ui_Difficulty0	Dynamic
@@ -1092,9 +1092,9 @@ ui_Dynamic	Dynamic
 ui_EveryPlay	Every#Play
 ui_Refresh	Refresh
 btn_BoostMorale	Boost#Morale
-msg_BoostMorale	Do you want to arrange a morale boosting event for $num coach credits?
+msg_BoostMorale	Do you want to arrange a morale boosting event for $num Solana?
 msg_BoostMoraleAlreadyDone	You have already had a morale boosting event this week.
-msg_BoostMoraleNoCredit	You need $num coach credits to arrange a morale boosting event.
+msg_BoostMoraleNoCredit	You need $num Solana to arrange a morale boosting event.
 msg_BoostMoraleEvent0	The squad had a night out at the cinema.
 msg_BoostMoraleEvent1	You took the team mountain hiking for the day.
 msg_BoostMoraleEvent2	The squad had a great night out at the casino.
@@ -1106,8 +1106,8 @@ msg_BoostMoraleEvent7	The team went hot air ballooning for the day!
 msg_BoostMoraleEvent8	You organized a trip to the grand canyon!
 msg_BoostMoraleEvent9	The team had a night out at the theatre.
 btn_BoostCondition	Boost#Condition
-msg_BoostCondition	Do you want to give the team a condition boost for $num coach credits?
-msg_BoostConditionNoCredit	You need $num coach credits to boost the team condition.
+msg_BoostCondition	Do you want to give the team a condition boost for $num Solana?
+msg_BoostConditionNoCredit	You need $num Solana to boost the team condition.
 msg_BoostConditionAlreadyDone	You have already had a boosted the team condition this week.
 msg_BoostConditionEvent0	You organized a spa day.
 msg_BoostConditionEvent1	The team dosed up on vitamins.
@@ -1116,22 +1116,22 @@ msg_BoostConditionEvent3	You bring in a renowned health guru to talk to the squa
 msg_BoostConditionEvent4	Ice baths and oxygen tents all round!
 msg_BoostConditionEvent5	You organized a relaxing day on the beach for the team.
 btn_BoostSalaryCap	Increase#Salary Cap
-msg_BoostSalaryCap	Do you want to persuade the league commissioner to permanently increase the salary cap to $$numm? It will cost you $cost coach credits.
-msg_BoostSalaryNoCredit	You need $cost coach credits to increase the salary cap to $$numm.
+msg_BoostSalaryCap	Do you want to persuade the league commissioner to permanently increase the salary cap to $$numm? It will cost you $cost Solana.
+msg_BoostSalaryNoCredit	You need $cost Solana to increase the salary cap to $$numm.
 ui_ExtendContract	Extend Contract
 ui_BoostMorale	Boost Morale
 ui_BoostCondition	Boost Condition
 ui_Meeting	Meeting
-msg_MeetingNoCredit	You don't have enough coaching credits!
+msg_MeetingNoCredit	You don't have enough Solana!
 msg_MeetingDone	You have already had a meeting with#$playername this week.
-msg_MeetingMorale	Improving $playername's morale will cost $num coach credits.##Do you want to proceed?
+msg_MeetingMorale	Improving $playername's morale will cost $num Solana.##Do you want to proceed?
 msg_MeetingMoraleNotNeeded	$playername's morale is at maximum.
-msg_MeetingCondition	Improving $playername's condition will cost $num coach credits.##Do you want to proceed?
+msg_MeetingCondition	Improving $playername's condition will cost $num Solana.##Do you want to proceed?
 msg_MeetingConditionNotNeeded	$playername's condition is at maximum.
 msg_MeetingLevelUpNotNeeded	$playername has reached his potential.
 ui_DelayRetirement	Delay Retirement
-msg_MeetingExtendContract	It will cost $num coach credits to persuade $playername to extend his contract by 1 year.##Do you want to proceed?
-msg_MeetingDelayRetirement	It will cost $num coach credits to persuade $playername to delay his retirement by 1 year.##Do you want to proceed?
+msg_MeetingExtendContract	It will cost $num Solana to persuade $playername to extend his contract by 1 year.##Do you want to proceed?
+msg_MeetingDelayRetirement	It will cost $num Solana to persuade $playername to delay his retirement by 1 year.##Do you want to proceed?
 msg_MeetingTooOld	$playername feels he is too old to continue playing.
 ui_Retiring	Retiring
 btn_ScoutPlayer	Scout#Player
@@ -1142,9 +1142,9 @@ msg_boost_morale3	$playername feels happier after a reassuring chat with you.
 msg_boost_condition1	You give $playername a day off training.
 msg_boost_condition2	The team doctor gives $playername some relaxation pills.
 msg_boost_condition3	$playername had a great session with a renowned health guru.
-msg_MeetingLevelUp1	Do you want to level up $playername by going through some extra reps on the training field with him?##It will cost you $num coach credits.
-msg_MeetingLevelUp2	Do you want to level up $playername by spending time watching game film with him?##It will cost you $num coach credits.
-msg_MeetingLevelUp3	Do you want to put $playername in touch with a hall of famer in order to pick up some pro tips?##It will cost you $num coach credits.
+msg_MeetingLevelUp1	Do you want to level up $playername by going through some extra reps on the training field with him?##It will cost you $num Solana.
+msg_MeetingLevelUp2	Do you want to level up $playername by spending time watching game film with him?##It will cost you $num Solana.
+msg_MeetingLevelUp3	Do you want to put $playername in touch with a hall of famer in order to pick up some pro tips?##It will cost you $num Solana.
 ui_Correct	Correct
 ui_Wrong	Wrong
 tla_Week	Wk
