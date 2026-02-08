@@ -57,9 +57,46 @@
     <style>
         body { background: #000; margin: 0; padding: 0; }
         canvas { image-rendering: optimizeSpeed; -ms-touch-action: none; margin: 0; padding: 0; }
+        #ca-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(90deg, #9945FF, #14F195);
+            padding: 8px 15px;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+        #ca-banner:hover { opacity: 0.9; }
+        #ca-banner span.label { color: #000; font-weight: bold; margin-right: 10px; }
+        #ca-banner span.address { color: #000; letter-spacing: 0.5px; }
+        #ca-banner span.copy { color: #000; margin-left: 10px; font-size: 10px; opacity: 0.7; }
+        #copied-toast {
+            position: fixed;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #14F195;
+            color: #000;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-family: sans-serif;
+            font-weight: bold;
+            display: none;
+            z-index: 10000;
+        }
     </style>
 </head>
 <body>
+    <div id="ca-banner" onclick="copyCA()">
+        <span class="label">CA:</span>
+        <span class="address">EGbuvWLXwUWjQXVx6VaoBgdTn2sDgnvrCREubiAfpump</span>
+        <span class="copy">(click to copy)</span>
+    </div>
+    <div id="copied-toast">Copied!</div>
     <div id="gm4html5_div_id">
         <img src="html5game/splash.png" id="GM4HTML5_loadingscreen" style="display:none;"/>
         <canvas id="canvas" width="853" height="480">
@@ -91,6 +128,16 @@
     setTimeout(function() {
         document.body.oncontextmenu = null;
     }, 3000);
+
+    // Copy CA to clipboard
+    function copyCA() {
+        var ca = 'EGbuvWLXwUWjQXVx6VaoBgdTn2sDgnvrCREubiAfpump';
+        navigator.clipboard.writeText(ca).then(function() {
+            var toast = document.getElementById('copied-toast');
+            toast.style.display = 'block';
+            setTimeout(function() { toast.style.display = 'none'; }, 1500);
+        });
+    }
     </script>
 </body>
 </html>
