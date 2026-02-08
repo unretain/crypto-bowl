@@ -26,7 +26,7 @@
     window.poki_loadbar = function() {};
     window.poki_gameplay_start = function() {};
     window.poki_gameplay_stop = function() {};
-    window.poki_commercial_break = function(cb) { if(cb) cb(); };
+    window.poki_commercial_break = function(cb) { if(cb) cb(true); };
     window.poki_rewarded_break = function(cb) { if(cb) cb(true); };
     window.cpd = function() { return false; };
     window.PokiSDK = null;

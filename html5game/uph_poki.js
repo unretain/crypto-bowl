@@ -34,14 +34,14 @@ function poki_happy_time(magnitude) {
 function poki_commercial_break_raw(fn) {
     if (PokiSDK) {
         PokiSDK.commercialBreak().then(function() { fn(true); });
-    } else setTimeout(function() { fn(false); }, 0);
+    } else setTimeout(function() { fn(true); }, 0);
 }
 
 ///~
 function poki_rewarded_break_raw(fn) {
     if (PokiSDK) {
         PokiSDK.rewardedBreak().then(fn);
-    } else setTimeout(function() { fn(false); }, 0);
+    } else setTimeout(function() { fn(true); }, 0);
 }
 
 /// https://yal.cc/gamemaker-html5-loading-bar-extended/
