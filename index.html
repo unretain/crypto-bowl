@@ -3,10 +3,33 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="pragma" content="no-cache"/>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <meta charset="utf-8"/>
     <title>Crypto Bowl</title>
+    <script>
+    // Clear corrupt save data on fresh start
+    (function() {
+        var version = 'cb_v2';
+        if (localStorage.getItem('_cb_ver') !== version) {
+            // Clear all game-related localStorage entries
+            var keys = [];
+            for (var i = 0; i < localStorage.length; i++) {
+                keys.push(localStorage.key(i));
+            }
+            keys.forEach(function(k) {
+                if (k && (k.indexOf('save') !== -1 || k.indexOf('option') !== -1 ||
+                    k.indexOf('uniform') !== -1 || k.indexOf('RetroBowl') !== -1 ||
+                    k.indexOf('gm4html5') !== -1)) {
+                    localStorage.removeItem(k);
+                }
+            });
+            localStorage.setItem('_cb_ver', version);
+            console.log('Cleared old save data for fresh start');
+        }
+    })();
+    </script>
     <style>
         body { background: #000; margin: 0; padding: 0; }
         canvas { image-rendering: optimizeSpeed; -ms-touch-action: none; margin: 0; padding: 0; }
