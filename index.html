@@ -9,14 +9,49 @@
     <meta charset="utf-8"/>
     <title>Crypto Bowl</title>
     <script>
-    // Clear ALL localStorage for fresh start
+    // Clear ALL localStorage for fresh start and patch save detection
     (function() {
-        var version = 'cb_v3';
+        var version = 'cb_v4';
         if (localStorage.getItem('_cb_ver') !== version) {
             localStorage.clear();
             localStorage.setItem('_cb_ver', version);
-            console.log('Cleared ALL localStorage for fresh start');
+            console.log('Cleared ALL localStorage for fresh start (v4)');
         }
+
+        // Patch localStorage.getItem to return null for empty/corrupt save files
+        var originalGetItem = localStorage.getItem.bind(localStorage);
+        localStorage.getItem = function(key) {
+            var value = originalGetItem(key);
+            // If it's a save-related key and value is empty/whitespace only, return null
+            if (key && key.indexOf('.save') !== -1 || key && key.indexOf('.option') !== -1 || key && key.indexOf('.uniform') !== -1) {
+                if (!value || value.trim() === '') {
+                    return null;
+                }
+            }
+            return value;
+        };
+
+        // Patch XMLHttpRequest to return 404 for save files (prevent serve -s from faking them)
+        var originalXHROpen = XMLHttpRequest.prototype.open;
+        XMLHttpRequest.prototype.open = function(method, url) {
+            this._cbUrl = url;
+            return originalXHROpen.apply(this, arguments);
+        };
+        var originalXHRSend = XMLHttpRequest.prototype.send;
+        XMLHttpRequest.prototype.send = function() {
+            if (this._cbUrl && (this._cbUrl.indexOf('savedata') !== -1 || this._cbUrl.indexOf('optiondata') !== -1 || this._cbUrl.indexOf('uniforms_custom') !== -1)) {
+                // Fake a 404 for save files
+                var self = this;
+                setTimeout(function() {
+                    Object.defineProperty(self, 'status', { value: 404, writable: false });
+                    Object.defineProperty(self, 'readyState', { value: 4, writable: false });
+                    if (self.onreadystatechange) self.onreadystatechange();
+                    if (self.onload) self.onload();
+                }, 0);
+                return;
+            }
+            return originalXHRSend.apply(this, arguments);
+        };
     })();
     </script>
     <style>
