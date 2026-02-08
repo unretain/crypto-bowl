@@ -1,0 +1,11 @@
+{
+  "name": "crypto-bowl",
+  "version": "1.0.0",
+  "description": "Crypto Bowl - A crypto-themed football game",
+  "scripts": {
+    "start": "npx serve -s . -l ${PORT:-3000}"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
