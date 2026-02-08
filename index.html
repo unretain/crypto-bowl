@@ -10,29 +10,9 @@
     <style>
         body { background: #000; margin: 0; padding: 0; }
         canvas { image-rendering: optimizeSpeed; -ms-touch-action: none; margin: 0; padding: 0; }
-        #loading-overlay {
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: #000;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            transition: opacity 0.5s;
-        }
-        #loading-overlay.hidden { opacity: 0; pointer-events: none; }
-        #loading-text { color: #fff; font-family: sans-serif; font-size: 24px; margin-bottom: 20px; }
-        #loading-bar-container { width: 60%; height: 20px; background: #333; border: 2px solid #fff; }
-        #loading-bar { height: 100%; background: #4488ff; width: 0%; transition: width 0.1s; }
     </style>
 </head>
 <body>
-    <div id="loading-overlay">
-        <div id="loading-text">Loading Crypto Bowl...</div>
-        <div id="loading-bar-container"><div id="loading-bar"></div></div>
-    </div>
-
     <div id="gm4html5_div_id">
         <img src="html5game/splash.png" id="GM4HTML5_loadingscreen" style="display:none;"/>
         <canvas id="canvas" width="853" height="480">
@@ -43,73 +23,21 @@
     <script>
     // Poki SDK stubs - so game runs without Poki
     window.poki_init_raw = function() { return false; };
-    window.poki_loadbar = function() {};
     window.poki_gameplay_start = function() {};
     window.poki_gameplay_stop = function() {};
     window.poki_commercial_break = function(cb) { if(cb) cb(true); };
     window.poki_rewarded_break = function(cb) { if(cb) cb(true); };
     window.cpd = function() { return false; };
     window.PokiSDK = null;
-
-    // Custom loading progress tracker
-    var loadingProgress = 0;
-    var loadingBar = null;
-    var loadingOverlay = null;
-
-    function updateLoadingBar(progress) {
-        loadingProgress = Math.max(loadingProgress, progress);
-        if (loadingBar) loadingBar.style.width = loadingProgress + '%';
-    }
-
-    function hideLoadingOverlay() {
-        if (loadingOverlay) {
-            loadingOverlay.classList.add('hidden');
-            setTimeout(function() { loadingOverlay.style.display = 'none'; }, 500);
-        }
-    }
     </script>
 
     <script type="text/javascript" src="html5game/RetroBowl.js"></script>
 
     <script>
     window.addEventListener("load", function() {
-        loadingBar = document.getElementById('loading-bar');
-        loadingOverlay = document.getElementById('loading-overlay');
-
         window.PokiSDK_loadState = 0;
         window.PokiSDK_OK = false;
-
-        // Start with some progress
-        updateLoadingBar(10);
-
         GameMaker_Init();
-
-        // Check canvas for actual content periodically
-        var checkInterval = setInterval(function() {
-            updateLoadingBar(loadingProgress + 5);
-            var canvas = document.getElementById('canvas');
-            if (canvas) {
-                var ctx = canvas.getContext('2d');
-                var pixel = ctx.getImageData(canvas.width/2, canvas.height/2, 1, 1).data;
-                // If center pixel is not pure black, game is rendering
-                if (pixel[0] > 0 || pixel[1] > 0 || pixel[2] > 0) {
-                    updateLoadingBar(100);
-                    setTimeout(hideLoadingOverlay, 200);
-                    clearInterval(checkInterval);
-                }
-            }
-            // Failsafe - hide after 10 seconds regardless
-            if (loadingProgress >= 100) {
-                setTimeout(hideLoadingOverlay, 200);
-                clearInterval(checkInterval);
-            }
-        }, 100);
-
-        // Absolute failsafe - hide after 15 seconds
-        setTimeout(function() {
-            hideLoadingOverlay();
-            clearInterval(checkInterval);
-        }, 15000);
     });
 
     // Re-enable right-click after 3 seconds
