@@ -230,7 +230,7 @@ ui_DivisionLeaders	Division Leaders
 ui_WildCard	Wild Card
 ui_InTheHunt	In the hunt
 ui_SuperBowl	Crypto Bowl
-ui_Super#Bowl	Retro#Bowl
+ui_Super#Bowl	Crypto#Bowl
 ui_Champion	Champion
 ui_PlayOffPicture	Playoff Picture
 msg_PlayOffResult	$teamname1 beat $teamname2 $score1-$score2!
@@ -864,8 +864,8 @@ ui_ChooseFace	Choose Face
 msg_ChooseFace	Choose your own profile image!
 ui_Uniforms	Uniforms
 btn_Uniforms	Change#Uniforms
-msg_TickerTwitter	Follow @retro_bowl on Twitter
-msg_TickerReddit	Join us on Reddit! r/RetroBowl
+msg_TickerTwitter	Welcome to Crypto Bowl!
+msg_TickerReddit	Powered by Solana!
 msg_NextGame	Next game: $teamname1 at $teamname2
 ui_VisitKong	Visit Kongregate.com
 ui_min1	1 Min
@@ -958,7 +958,7 @@ msg_HofListTooBig	There is no room in the Hall of Fame! Please remove a player b
 msg_TradeAwayRookie	Warning! Trading a recently signed player has a negative impact on team morale and your fan relationship!
 ui_RetroBowlWinners	Crypto Bowl Winners
 ui_RetroBowls	Crypto Bowls
-btn_RetroBowls	Retro   #Bowls
+btn_RetroBowls	Crypto#Bowls
 btn_PlayerHallOfFame	Player   #HOF
 ui_YourHistory	Your History
 ui_Records	Records
